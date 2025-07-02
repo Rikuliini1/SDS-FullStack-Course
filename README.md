@@ -1,2 +1,6 @@
 # SDS-FullStack-Course
-This repository is for the course Software Development Skills Full-Stack
+This repository is for the course Software Development Skills: Full-Stack
+
+<br>
+
+EOF
