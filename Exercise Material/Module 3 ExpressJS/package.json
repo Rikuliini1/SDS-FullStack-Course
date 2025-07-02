@@ -1,0 +1,18 @@
+{
+	"name": "module-3-expressjs",
+	"version": "1.0.0",
+	"description": "module 3 exercise material",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server",
+		"dev": "node --watch --env-file=.env server"
+	},
+	"author": "JI",
+	"license": "MIT",
+	"dependencies": {
+		"colors": "^1.4.0",
+		"express": "^5.1.0"
+	}
+}
