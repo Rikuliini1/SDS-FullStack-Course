@@ -1,0 +1,22 @@
+{
+	"name": "module-5-mern-stack",
+	"version": "1.0.0",
+	"description": "Example MERN-Stack project.",
+	"main": "server.js",
+	"scripts": {
+		"start": "node backend/server.js",
+		"server": "nodemon backend/server.js"
+	},
+	"author": "JI",
+	"license": "MIT",
+	"dependencies": {
+		"colors": "^1.4.0",
+		"dotenv": "^17.1.0",
+		"express": "^5.1.0",
+		"express-async-handler": "^1.2.0",
+		"mongoose": "^8.16.2"
+	},
+	"devDependencies": {
+		"nodemon": "^3.1.10"
+	}
+}
