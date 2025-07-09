@@ -158,4 +158,73 @@ It is commonly used to improve development efficiency by eliminating the need to
 
 <br>
 
+# bcryptjs
+
+The bcryptjs package is a JavaScript implementation of the bcrypt hashing algorithm, commonly used for securely storing passwords.  
+It works entirely in pure JavaScript, which makes it:
+- Cross-platform
+- Usable in Node.js and browser (React/Vite/etc.)
+- Easy to install (no C++ build tools like node-gyp)
+
+### bcryptjs Installation:
+
+    npm install bcryptjs
+
+### How bcryptjs Works:
+
+Salting: Adds random data to the password before hashing.  
+Hashing: Applies the bcrypt algorithm, making the result slow to crack.  
+Rounds: Controls how many times the algorithm is applied. More rounds = more security (but slower).
+
+### Why Use bcryptjs?
+
+Storing plain-text passwords is a major security risk.
+bcryptjs helps you:
+- Hash passwords before saving them to a database.
+- Compare a user’s entered password with the saved (hashed) password securely.
+
+### Security Notes:
+
+bcryptjs is secure enough for general use, but:
+- It's slower than native bcrypt.
+- May not protect against side-channel attacks as well as native code.
+
+For serious backend applications, use native bcrypt.
+
+### Use bcryptjs when:
+- You're building a frontend app (like React + Vite).
+- You want to avoid native build tool issues.
+- You want a simple, cross-platform solution for hashing.
+
+<br>
+
+# jsonwebtoken
+
+The jsonwebtoken package (often abbreviated as jwt) is a popular Node.js library used to create, sign, verify, and decode JSON Web Tokens (JWTs),  
+a widely used standard for user authentication and authorization.
+
+### jsonwebtoken Installation:
+
+    npm install jsonwebtoken
+
+### What is a JWT?
+
+A JSON Web Token (JWT) is a compact, self-contained token that:
+- Is digitally signed (with a secret or private key).
+- Can store user data (e.g., user ID, roles).
+- Is used to authenticate users across requests without sessions.
+
+### Common Use Cases
+- Login systems: Authenticate users and store their session as a token.
+- API protection: Only allow access if a valid JWT is sent.
+- Stateless auth: No need to store sessions on the server.
+
+### Security Tips
+- Always use a strong secret key (JWT_SECRET).
+- Never store sensitive data (e.g., passwords) in the JWT payload.
+- Use HTTPS to prevent token theft.
+- Set expiration (expiresIn) to limit lifetime.
+
+<br>
+
 *EOF*
