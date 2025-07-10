@@ -192,6 +192,7 @@ bcryptjs is secure enough for general use, but:
 For serious backend applications, use native bcrypt.
 
 ### Use bcryptjs when:
+
 - You're building a frontend app (like React + Vite).
 - You want to avoid native build tool issues.
 - You want a simple, cross-platform solution for hashing.
@@ -214,16 +215,37 @@ A JSON Web Token (JWT) is a compact, self-contained token that:
 - Can store user data (e.g., user ID, roles).
 - Is used to authenticate users across requests without sessions.
 
-### Common Use Cases
+### Common Use Cases:
+
 - Login systems: Authenticate users and store their session as a token.
 - API protection: Only allow access if a valid JWT is sent.
 - Stateless auth: No need to store sessions on the server.
 
-### Security Tips
+### Security Tips:
+
 - Always use a strong secret key (JWT_SECRET).
 - Never store sensitive data (e.g., passwords) in the JWT payload.
 - Use HTTPS to prevent token theft.
 - Set expiration (expiresIn) to limit lifetime.
+
+<br>
+
+# concurrently (DevDependancy)
+
+The concurrently package is a Node.js utility that lets you run multiple commands simultaneously in the same terminal,  
+which is especially useful in full-stack projects where you want to run the frontend and backend servers at the same time.
+
+### concurrently Installation (as a DevDependancy):
+
+    npm install -D concurrently
+
+### Why Use concurrently?
+
+In a typical full-stack setup, you often want to:
+- run your React frontend (npm run dev inside /frontend)
+- and your Node/Express backend (npm run server inside /backend)
+
+Instead of opening two terminals, you can run both with concurrently.
 
 <br>
 

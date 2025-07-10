@@ -49,7 +49,7 @@ const updateGoal = asyncHandler(async (req, res) => {
         throw new Error('User not authorized')
     }
 
-    const updatedGoal = await Goal.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    const updatedGoal = await Goal.findByIdAndUpdate(req.params.id, req.body, {new: true})
     res.status(200).json(updatedGoal)
 })
 
@@ -77,14 +77,9 @@ const deleteGoal = asyncHandler(async (req, res) => {
     }
     
     await goal.deleteOne();
-    res.status(200).json({ id: req.params.id })
+    res.status(200).json({id: req.params.id})
 })
 
-module.exports = {
-    getGoals,
-    setGoal,
-    updateGoal,
-    deleteGoal
-}
+module.exports = { getGoals, setGoal, updateGoal, deleteGoal }
 
 // EOF
