@@ -1,3 +1,4 @@
+const path = require('path')
 const express = require('express')
 const dotenv = require('dotenv').config()
 const colors = require('colors')
@@ -15,6 +16,16 @@ async function initialize() {
 
     app.use('/api/goals', require('./routes/goalRoutes'))
     app.use('/api/users', require('./routes/userRoutes'))
+
+    // Serve frontend
+    if (process.env.NODE_ENV === 'production') {
+        app.use(express.static(path.join(__dirname, '../frontend/dist')))
+
+        app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, '../', 'frontend', 'dist', 'index.html')))
+    } else {
+        app.get('/', (req, res) => res.send('Please set to production'))
+    }
+
     app.use(errorHandler)
 
     app.listen(port, () => console.log(`Server running on port ${port}`.cyan.underline))
