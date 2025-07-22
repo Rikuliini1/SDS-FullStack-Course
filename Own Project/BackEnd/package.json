@@ -1,0 +1,23 @@
+{
+	"name": "sds-fullstack-project-backend",
+	"version": "1.0.0",
+	"description": "This is the backend of SDS FullStack Project",
+	"type": "module",
+	"main": "src/server.js",
+	"scripts": {
+		"server": "nodemon src/server.js"
+	},
+	"author": "JI",
+	"license": "MIT",
+	"dependencies": {
+		"bcryptjs": "^3.0.2",
+		"colors": "^1.4.0",
+		"dotenv": "^17.2.0",
+		"express": "^5.1.0",
+		"jsonwebtoken": "^9.0.2",
+		"mongoose": "^8.16.3"
+	},
+	"devDependencies": {
+		"nodemon": "^3.1.10"
+	}
+}

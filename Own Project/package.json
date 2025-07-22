@@ -1,0 +1,22 @@
+{
+	"name": "sds-fullstack-project",
+	"version": "1.0.0",
+	"description": "This project is for SDS FullStack course",
+	"main": "index.js",
+	"scripts": {
+		"app": "concurrently \"npm run server --prefix BackEnd\" \"npm run client --prefix FrontEnd\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Rikuliini1/SDS-FullStack-Project.git"
+	},
+	"author": "JI",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Rikuliini1/SDS-FullStack-Project/issues"
+	},
+	"homepage": "https://github.com/Rikuliini1/SDS-FullStack-Project#readme",
+	"devDependencies": {
+		"concurrently": "^9.2.0"
+	}
+}
